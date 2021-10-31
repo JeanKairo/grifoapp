@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import {
     View,Text,StyleSheet,Button,TouchableOpacity,SafeAreaView
 } from 'react-native';
+
 import FlexBoxV1 from '../components/layout/FlexBoxV1';
 import Terceiro from '../components/Styles/Terceiro';
 import Quarto from '../components/Styles/Quarto';
@@ -11,6 +12,8 @@ import EmailInput from '../components/Styles/Primeiro';
 import SenhaInput from '../components/Styles/Segundo';
 
 import Login from '../Views/Login'
+import Cadastro from '../Views/Cadastro'
+import Menu from '../Views/Menu'
 
 export default props => {
     //let numero = props.inicial
@@ -32,7 +35,6 @@ export default props => {
                 <Terceiro/>
               </View>
               <View>
-                
                 <TouchableOpacity style={Login.button}  onPress={inc}>
                   <Text style = {Login.TextLogin}>Login</Text>
                 </TouchableOpacity>
@@ -49,11 +51,7 @@ export default props => {
     }if(numero==1){
         //Menu
         return (
-             <SafeAreaView style={{
-                 
-                 justifyContent: 'center',
-                 alignContent:'center',
-             }}>
+            <SafeAreaView >
                 <TouchableOpacity style={Login.button}  onPress={dec}>
                 <Text style = {Login.TextLogin}>Menu, voltar</Text>
                 </TouchableOpacity>
@@ -71,6 +69,14 @@ export default props => {
     }
  }
 
-
+ const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    
+  
+  }
+});
 
  
